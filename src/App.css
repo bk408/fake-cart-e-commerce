@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-head {
+  background-color: lightsalmon;
+  padding: 5px;
+}
+
+.nav-title ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-title li {
+  display: inline;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.products{
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px;
+}
+
+.products-card{
+  margin: 10px;
+   border: 1px solid #cce;
+   border-radius: 20px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   width: 300px;
+}
+
+.product-image{
+  width: 100px;
+  height: 100px;
+}
+
+.filter-container {
+
+  padding: 10px; 
+}
+
+.filter-section {
+  display: flex; 
+  align-items: center; 
+}
+
+.filter-section h5 {
+  margin: 0; 
+  margin-right: 10px;
+
+}
+
+.filter-section button{
+
+  margin: 5px;
+  
+}
+
+
