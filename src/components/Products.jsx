@@ -29,7 +29,7 @@ const Products = ({ productsData }) => {
   return (
     <div className="filter-container">
       <div className="filter-section">
-        <button onClick={toggleFilter}>Filter</button>
+        <button onClick={toggleFilter}>Rating</button>
       </div>
 
       <div className="filter-section">
