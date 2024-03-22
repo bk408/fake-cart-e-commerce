@@ -1,6 +1,17 @@
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+ const [isDarkTheme, setIsDarkTheme] = useState(false)
+
+  const toggleBtn = () => {
+    setIsDarkTheme(!isDarkTheme)
+    
+    document.body.style.backgroundColor = isDarkTheme ? "white" : "black";
+    document.body.style.color = isDarkTheme ? "black" : "white";
+  }
+
   return (
     <div className="nav-head">
       <div className="nav-title">
@@ -15,6 +26,7 @@ const Navbar = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          <button onClick={toggleBtn}>Toggle</button>
           <li className="cart">
             {" "}
             <Link to="/cart">Cart</Link>
