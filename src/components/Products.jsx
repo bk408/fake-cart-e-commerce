@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 /* eslint-disable react/prop-types */
 const Products = ({ productsData }) => {
@@ -24,7 +26,13 @@ const Products = ({ productsData }) => {
     ? productsData.filter((product) => product.category == "jewelery")
     : productsData && menClothingFilter
     ? productsData.filter((product) => product.category == "men's clothing")
-    : productsData;
+        : productsData;
+
+  const dispatch = useDispatch();
+  
+  const handleAddItem = (product) => {
+      dispatch(addItem(product));
+    }
 
   return (
     <div className="filter-container">
@@ -53,6 +61,9 @@ const Products = ({ productsData }) => {
             <p>{shortDescription(product.description)}</p>
             <p> {product.category} </p>
             <p> {product.rating.rate} </p>
+            <button className="btn" onClick={() => handleAddItem(product)}>
+              Add
+            </button>
           </div>
         ))}
       </div>

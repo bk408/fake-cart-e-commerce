@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -11,6 +12,9 @@ const Navbar = () => {
     document.body.style.backgroundColor = isDarkTheme ? "white" : "black";
     document.body.style.color = isDarkTheme ? "black" : "white";
   }
+
+  const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems);
 
   return (
     <div className="nav-head">
@@ -29,7 +33,7 @@ const Navbar = () => {
           <button onClick={toggleBtn}>Toggle</button>
           <li className="cart">
             {" "}
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart {cartItems.length} </Link>
           </li>
         </ul>
       </div>
