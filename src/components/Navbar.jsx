@@ -1,20 +1,18 @@
-
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
- const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   const toggleBtn = () => {
-    setIsDarkTheme(!isDarkTheme)
-    
+    setIsDarkTheme(!isDarkTheme);
+
     document.body.style.backgroundColor = isDarkTheme ? "white" : "black";
     document.body.style.color = isDarkTheme ? "black" : "white";
-  }
+  };
 
   const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems);
 
   return (
     <div className="nav-head">
@@ -33,7 +31,13 @@ const Navbar = () => {
           <button onClick={toggleBtn}>Toggle</button>
           <li className="cart">
             {" "}
-            <Link to="/cart">Cart {cartItems.length} </Link>
+            <Link to="/cart" className="cart-link">
+              <img
+                src="https://img.icons8.com/skeuomorphism/32/experimental-shopping-cart-skeuomorphism.png"
+                alt="experimental-shopping-cart-skeuomorphism"
+              />
+              <span className="cart-count">{cartItems.length}</span>
+            </Link>
           </li>
         </ul>
       </div>
