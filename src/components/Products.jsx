@@ -37,15 +37,21 @@ const Products = ({ productsData }) => {
   return (
     <div className="filter-container">
       <div className="filter-section">
-        <button onClick={toggleFilter}>Rating</button>
+        <button className="prod-btn" onClick={toggleFilter}>
+          Rating
+        </button>
       </div>
 
       <div className="filter-section">
-        <button onClick={toggleJewel}>Jewelery</button>
+        <button className="prod-btn" onClick={toggleJewel}>
+          Jewelery
+        </button>
       </div>
 
       <div className="filter-section">
-        <button onClick={toggleMen}>Men clothing</button>
+        <button className="prod-btn" onClick={toggleMen}>
+          Men clothing
+        </button>
       </div>
 
       <div className="products">

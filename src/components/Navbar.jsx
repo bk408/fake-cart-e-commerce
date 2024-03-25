@@ -28,7 +28,7 @@ const Navbar = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-          <button onClick={toggleBtn}>Toggle</button>
+          <button className="nav-btn" onClick={toggleBtn}>Toggle</button>
           <li className="cart">
             {" "}
             <Link to="/cart" className="cart-link">
