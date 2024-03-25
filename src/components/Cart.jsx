@@ -29,7 +29,7 @@ const Cart = () => {
                 <div className="cart-item" key={id}>
                   <img src={item.image} alt="product-img" />
                   <div className="cart-item-details">
-                    <h3>{item.title}</h3>
+                    <h3>{shortTitle(item.title)}</h3>
                     <p>Price: {item.price}</p>
                     <p> {item.category} </p>
                     <button
@@ -54,5 +54,16 @@ const Cart = () => {
     </div>
   );
 };
+
+const shortTitle = (title) => {
+  const words = title.split(" ");  // Men's clothing of brand => "men" "clothing" "of" "brand"
+   
+  if (words.length > 8) {
+    return words.splice(0, 8).join(" ") + "..."; // splice remove the existing array values => Men's clothing of brand june => Men's clothing of brand...
+  }
+
+  return title;
+}
+
 
 export default Cart;
