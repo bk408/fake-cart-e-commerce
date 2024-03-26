@@ -15,12 +15,17 @@
 - dispatch & action using useDispatch
 - update the cart component
 
+- update the remove functionality
+- update cart name in Navbar
+
+- Testing
+
+
 
 # Pending
 
 - Improve add functionality 
 - Improve remove functionality
-- Create add and remove items from a single button
-- update cart name in Navbar
+
 
 
