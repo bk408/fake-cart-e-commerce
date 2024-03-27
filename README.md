@@ -20,6 +20,14 @@
 
 - Testing
 
+# Testing
+- Install react testing library
+- Install jest
+- Install dependency which requires to use Babel along with jest
+- create & configure babel.config.js file
+- create .parcelrc file and add the configuration file or configure Parcel config file to disable default babel transpilation
+
+
 
 
 # Pending
